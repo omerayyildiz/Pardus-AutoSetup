@@ -57,10 +57,10 @@ sudo apt-get install neofetch
 echo --------------------------------------
 sleep 1
 echo Telegram Masaüstüne Alınıyor...
-cp -r /media/pardus/TUX/Setups/tar/tsetup.1.6.7.tar.xz /home/pardus/Masaüstü/
-cd ~/Masaüstü
+cp -r /media/pardus/TUX/Setups/tar/tsetup.1.6.7.tar.xz /home/pardus/
+cd ~
 tar -xf tsetup.1.6.7.tar.xz
-cd ~/Masaüstü/
+cd ~
 rm tsetup.1.6.7.tar.xz
 echo Masaüstüne Alındı!
 echo --------------------------------------
