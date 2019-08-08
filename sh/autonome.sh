@@ -1,0 +1,1 @@
+echo "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" | ./parGnome.sh
