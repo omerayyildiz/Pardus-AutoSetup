@@ -77,10 +77,10 @@ echo "${yellow}Git Kurulacak...${reset}"
  sleep 1
 
 echo "${cyan}Deepin System Monitor Kurulacak...${reset}"
-sleep 3
-sudo apt-get install deepin-system-monitor
-echo "${line}"
-sleep 1
+ sleep 3
+ sudo apt-get install deepin-system-monitor
+ echo "${line}"
+ sleep 1
 
 echo "${cyan}Visual Studio Code Kurulacak...${reset}"
  sleep 3
