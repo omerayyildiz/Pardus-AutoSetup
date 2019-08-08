@@ -1,14 +1,14 @@
 #!/bin/bash
 echo Progremci Debian AutoSetup™
-sleep 7
+sleep 2
 clear
 echo Kurulum Hazırlanıyor...
 sleep 1
 echo Kurulum Başlıyor... Lütfen Terminalden Ayrılmayınız!
-sleep 7
+sleep 2
 clear
 echo Kurulum Başladı! 
-sleep 3
+sleep 1
 clear
 echo ---------------------------------------
 sudo apt-get update
@@ -56,13 +56,13 @@ sleep 3
 sudo apt-get install neofetch
 echo --------------------------------------
 sleep 1
-echo Telegram Masaüstüne Alınıyor...
+echo Telegram Ev Dizinine Alınıyor...
 cp -r /media/pardus/TUX/Setups/tar/tsetup.1.6.7.tar.xz /home/pardus/
 cd ~
 tar -xf tsetup.1.6.7.tar.xz
 cd ~
 rm tsetup.1.6.7.tar.xz
-echo Masaüstüne Alındı!
+echo Telegram Başarıyla Alındı!
 echo --------------------------------------
 sleep 1
 echo Çöpler Dışarı Atılıyor...
@@ -73,10 +73,10 @@ clear
 echo --------------------------------------
 sleep 1
 echo KURULUM TAMAMLANDI PROGREMCI!
-sleep 3
+sleep 2
 clear
 echo progremci.com
-sleep 3
+sleep 2
 clear
 echo -------------------------------------- 
 neofetch
