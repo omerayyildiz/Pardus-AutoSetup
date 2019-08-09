@@ -38,19 +38,30 @@ echo "${yellow}Progremci Debian AutoSetup™${reset}"
  clear
 
 echo "${blue}Kurulum Hazırlanıyor..."
+   #default_disk="TUX"
+   #if [$default_disk -eq $default_disk]
+   #then
+   #else 
+   #  gps=$(cd ../../.. && ls)
+   #  local= echo ${gps}
+   #sed "s/$default_disk/$local/g" parGnome.sh -i parGnome.sh
+   #fi
  sleep 1 
+
+
 echo Kurulum Başlıyor... Lütfen Terminalden Ayrılmayınız!
  sleep 2
  clear
 echo "${reset}Kurulum Başladı!" 
  sleep 1
  clear
- echo "${line}"
+ echo $line
   sudo apt-get update
   sudo apt-get upgrade
+  sudo apt-get install curl
   sudo apt-get install snapd
   sudo apt --fix-broken install
- echo "${line}"
+ echo $line
  sleep 1
 
 
@@ -58,33 +69,32 @@ echo "${red}Ruby Kurulacak...${reset}"
  sleep 3
  sudo apt-get install ruby
   sudo apt-get install gem
- echo "${line}"
+ echo $line
  sleep 1
 
 
 echo "${cyan}Spotify Kurulacak...${reset}"
 #Spotify'ı Debian depolarında göremediğim için depo ekledim.
  sleep 3
- sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A87FF9DF48BF1C90
- echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
- sudo apt update
- sudo apt install spotify-client
- echo "${line}"
+ curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
+ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+ sudo apt-get update && sudo apt-get install spotify-client
+ echo $line
  sleep 1
 
 
 echo "${yellow}Git Kurulacak...${reset}"
  sleep 3
  sudo apt-get install git
- echo "${line}"
+ echo $line
  sleep 1
 
 
 echo "${cyan}Visual Studio Code Kurulacak...${reset}"
  sleep 3
  cd /media/pardus/TUX/Setups/deb
- sudo dpkg -i code_1.36.1-1562627527_amd64.deb
- echo "${line}"
+ sudo dpkg -i code_1.37.0-1565227985_amd64.deb
+ echo $line
  sleep 1
 
 
@@ -95,14 +105,14 @@ echo "${magenta}Discord Kurulacak...${reset}"
  sudo apt --fix-broken install
  sudo apt-get update
  sudo apt-get upgrade
- echo "${line}"
+ echo $line
  sleep 1
 
 
 echo Neofetch Kurulacak...
  sleep 3
  sudo apt-get install neofetch
- echo "${line}"
+ echo $line
  sleep 1
 
 
@@ -112,7 +122,7 @@ echo "${blue}Telegram Ev Dizinine Alınıyor...${reset}"
  tar -xf tsetup.1.6.7.tar.xz
  rm tsetup.1.6.7.tar.xz
   echo Telegram Başarıyla Alındı!
-  echo "${line}"
+  echo $line
  sleep 1
 
 
@@ -121,7 +131,7 @@ echo "${red}Çöpler Dışarı Atılıyor..."
  sudo apt-get autoremove
  sudo apt-get clean
  clear
- echo "${line}"
+ echo $line
  sleep 1
 
 
@@ -131,7 +141,7 @@ echo "${yellow}KURULUM TAMAMLANDI PROGREMCI!"
 echo "${reset}progremci.com"
  sleep 2
  clear
- echo "${line}" 
+ echo $line 
  neofetch
  sleep 5
  echo ":)"
