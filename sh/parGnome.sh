@@ -101,10 +101,10 @@ echo "${cyan}Visual Studio Code Kurulacak...${reset}"
 echo "${magenta}Discord Kurulacak...${reset}"
  sleep 3
  sudo snap install discord
- sudo dpkg -i discord-0.0.9.deb
- sudo apt --fix-broken install
  sudo apt-get update
  sudo apt-get upgrade
+ sudo apt --fix-broken install
+ sudo dpkg -i discord-0.0.9.deb
  echo $line
  sleep 1
 
@@ -143,6 +143,5 @@ echo "${reset}progremci.com"
  clear
  echo $line 
  neofetch
- sleep 5
  echo ":)"
 exit
