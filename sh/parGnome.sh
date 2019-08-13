@@ -38,17 +38,7 @@ echo "${yellow}Progremci Debian AutoSetup™${reset}"
  clear
 
 echo "${blue}Kurulum Hazırlanıyor..."
-   #default_disk="TUX"
-   #if [$default_disk -eq $default_disk]
-   #then
-   #else 
-   #  gps=$(cd ../../.. && ls)
-   #  local= echo ${gps}
-   #sed "s/$default_disk/$local/g" parGnome.sh -i parGnome.sh
-   #fi
  sleep 1 
-
-
 echo Kurulum Başlıyor... Lütfen Terminalden Ayrılmayınız!
  sleep 1
  clear
@@ -59,14 +49,13 @@ echo "${reset}Kurulum Başladı!"
   echo e | sudo apt-get update
   echo e | sudo apt-get upgrade
   echo e | sudo apt-get install curl
-  echo e | sudo apt-get install snapd
   echo e | sudo apt --fix-broken install
  echo $line
  sleep 1
 
 
 echo "${red}Ruby Kurulacak...${reset}"
- sleep 3
+ sleep 1
   echo e | sudo apt-get install ruby 
    echo e | sudo apt-get install gem 
  echo $line
@@ -75,17 +64,18 @@ echo "${red}Ruby Kurulacak...${reset}"
 
 echo "${cyan}Spotify Kurulacak...${reset}"
 #Spotify'ı Debian depolarında göremediğim için depo ekledim.
- sleep 3
+ sleep 1
+  echo e | sudo apt --fix-broken install
   curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
   echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-  echo e | sudo apt-get update && sudo apt-get install spotify-client
-  echo e | sudo apt --fix-broken install
+  echo e | sudo apt-get update
+  echo e | sudo apt-get install spotify-client
  echo $line
  sleep 1
 
 
 echo "${yellow}Git Kurulacak...${reset}"
- sleep 3
+ sleep 1
   echo e | sudo apt-get install git
   #Git ayarlarını kendinize göre yapınız!
    git config --global user.name "Ömer Ayyıldız" 
@@ -95,7 +85,7 @@ echo "${yellow}Git Kurulacak...${reset}"
 
 
 echo "${cyan}Visual Studio Code Kurulacak...${reset}"
- sleep 3
+ sleep 1
   echo e | sudo apt --fix-broken install
   cd /media/pardus/TUX/Pardus-AutoSetup/deb
   sudo dpkg -i code_1.37.0-1565227985_amd64.deb
@@ -107,18 +97,17 @@ echo "${cyan}Visual Studio Code Kurulacak...${reset}"
 
 
 echo "${magenta}Discord Kurulacak...${reset}"
-sleep 3
-  echo e | sudo snap install discord
+sleep 1
   echo e | sudo apt-get update
   echo e | sudo apt-get upgrade
-  echo e | sudo apt --fix-broken install
   sudo dpkg -i discord-0.0.9.deb
+  echo e | sudo apt --fix-broken install
  echo $line
  sleep 1
 
 
 echo Neofetch Kurulacak...
- sleep 3
+ sleep 1
   echo e | sudo apt-get install neofetch
  echo $line
  sleep 1
@@ -135,7 +124,7 @@ echo "${blue}Telegram Ev Dizinine Alınıyor...${reset}"
 
 
 echo "${red}Çöpler Dışarı Atılıyor..."
- sleep 3
+ sleep 1
   echo e | sudo apt-get autoremove
   echo e | sudo apt-get clean
  clear
@@ -143,9 +132,6 @@ echo "${red}Çöpler Dışarı Atılıyor..."
  sleep 1
 
 echo "${yellow}Kurulumlar Kontrol Ediliyor...${reset}"
-  echo "Snap Ve Sistem Versiyon"
-   snap --version
-   echo $line
   echo "Ruby Versiyon"
    ruby --version
    echo $line
@@ -167,7 +153,7 @@ echo "${yellow}Kurulumlar Kontrol Ediliyor...${reset}"
 sleep 10
 
 echo "${yellow}KURULUM TAMAMLANDI PROGREMCI!"
- sleep 2
+ sleep 1
   clear
 echo "${reset}progremci.com"
  sleep 2

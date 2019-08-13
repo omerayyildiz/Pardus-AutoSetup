@@ -37,9 +37,7 @@ hatasını alırsanız repair klasöründe bulunan apt-lock-error-solve.sh dosya
 
 Bağımlılık hatası aldığınızda ise apt-repair.sh'ı çalıştırabilirsiniz.
 
- ## **TO-DO**
-
-* Otomatik dosya yolu eklenicek.
-* Otomatik duvar kağıdı komutu eklenicek.
+## **VSCode Ve Discord'u Güncellemek
+Bunun için _upgrade-deb.sh_ dosyasını çalıştırın.
 
 Ömer Ayyıldız

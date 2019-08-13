@@ -38,14 +38,6 @@ echo "${yellow}Progremci Debian AutoSetup™${reset}"
  clear
 
 echo "${blue}Kurulum Hazırlanıyor..."
-   #default_disk="TUX"
-   #if [$default_disk -eq $default_disk]
-   #then
-   #else 
-   #  gps=$(cd ../../.. && ls)
-   #  local= echo ${gps}
-   #sed "s/$default_disk/$local/g" parGnome.sh -i parGnome.sh
-   #fi
  sleep 1 
 
 
@@ -57,16 +49,14 @@ echo "${reset}Kurulum Başladı!"
  clear
  echo $line
   echo e | sudo apt-get update
-  echo e | sudo apt-get upgrade
-  echo e | sudo apt-get install snapd
-    #echo e | sudo apt-get install curl (Olur da spotify için debian depoları bozulursa.)
+  echo e | sudo apt-get upgrade   
   echo e | sudo apt --fix-broken install
  echo $line
  sleep 1
 
 
 echo "${red}Ruby Kurulacak...${reset}"
- sleep 3
+ sleep 1
   echo e | sudo apt-get install ruby
   echo e | sudo apt-get install gem
  echo $line
@@ -74,7 +64,7 @@ echo "${red}Ruby Kurulacak...${reset}"
 
 
 echo "${cyan}Spotify Kurulacak...${reset}"
- sleep 3
+ sleep 1
   echo e | sudo apt --fix-broken install
   echo e | sudo apt install spotify-client
  echo $line
@@ -95,7 +85,7 @@ comments
 
 
 echo "${yellow}Git Kurulacak...${reset}"
- sleep 3
+ sleep 1
   echo e | sudo apt-get install git
   #Git ayarlarını kendinize göre yapınız!
    git config --global user.name "Ömer Ayyıldız" 
@@ -105,14 +95,14 @@ echo "${yellow}Git Kurulacak...${reset}"
 
 
 echo "${cyan}Deepin System Monitor Kurulacak...${reset}"
- sleep 3
+ sleep 1
   echo e | sudo apt-get install deepin-system-monitor
  echo $line
  sleep 1
 
 
 echo "${cyan}Visual Studio Code Kurulacak...${reset}"
- sleep 3
+ sleep 1
   echo e | sudo apt --fix-broken install
   cd /media/pardus/TUX/Pardus-AutoSetup/deb
   sudo dpkg -i code_1.37.0-1565227985_amd64.deb
@@ -124,8 +114,7 @@ echo "${cyan}Visual Studio Code Kurulacak...${reset}"
 
 
 echo "${magenta}Discord Kurulacak...${reset}"
- sleep 3
-  echo e | sudo apt-get install discord
+ sleep 1
   echo e | sudo dpkg -i discord-0.0.9.deb
   echo e | sudo apt --fix-broken install
   echo e | sudo apt-get update
@@ -135,7 +124,7 @@ echo "${magenta}Discord Kurulacak...${reset}"
 
 
 echo Neofetch Kurulacak...
- sleep 3
+ sleep 1
   echo e | sudo apt-get install neofetch
  echo $line
  sleep 1
@@ -152,7 +141,7 @@ echo "${blue}Telegram Ev Dizinine Alınıyor...${reset}"
 
 
 echo "${red}Çöpler Dışarı Atılıyor..."
- sleep 3
+ sleep 1
   echo e | sudo apt-get autoremove
   echo e | sudo apt-get clean
  clear
@@ -161,9 +150,6 @@ echo "${red}Çöpler Dışarı Atılıyor..."
 
 
 echo "${yellow}Kurulumlar Kontrol Ediliyor...${reset}"
-  echo "Snap Ve Sistem Versiyon"
-   snap --version
-   echo $line
   echo "Ruby Versiyon"
    ruby --version
    echo $line
@@ -185,7 +171,7 @@ echo "${yellow}Kurulumlar Kontrol Ediliyor...${reset}"
   echo "Neofetch Versiyon"
    neofetch --version
    echo $line
-sleep 10
+sleep 15
 
 
 echo "${yellow}KURULUM TAMAMLANDI PROGREMCI!"
