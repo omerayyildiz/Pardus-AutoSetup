@@ -37,7 +37,7 @@ hatasını alırsanız repair klasöründe bulunan apt-lock-error-solve.sh dosya
 
 Bağımlılık hatası aldığınızda ise apt-repair.sh'ı çalıştırabilirsiniz.
 
-## **VSCode Ve Discord'u Güncellemek
+## **VSCode Ve Discord'u Güncellemek**
 Bunun için _upgrade-deb.sh_ dosyasını çalıştırın.
 
 Ömer Ayyıldız
