@@ -1,2 +1,1 @@
-cd /media/pardus/TUX/Pardus-AutoSetup/sh  
-echo "e e e e e e e e e e e e e e e e" | ./parXFCE.sh
+cd /media/pardus/TUX/Pardus-AutoSetup/sh && ./parXfce.sh

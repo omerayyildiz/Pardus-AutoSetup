@@ -30,17 +30,25 @@ red=`tput setaf 1`
 cyan=`tput setaf 6`
 magenta=`tput setaf 5`
 reset=`tput sgr0`
-gps= cd ../.. && pwd
 line="--------------------------------------"
 clear
-
 
 echo "${yellow}Progremci Debian AutoSetup™${reset}"
  sleep 2
  clear
 
 echo "${blue}Kurulum Hazırlanıyor..."
+   #default_disk="TUX"
+   #if [$default_disk -eq $default_disk]
+   #then
+   #else 
+   #  gps=$(cd ../../.. && ls)
+   #  local= echo ${gps}
+   #sed "s/$default_disk/$local/g" parGnome.sh -i parGnome.sh
+   #fi
  sleep 1 
+
+
 echo Kurulum Başlıyor... Lütfen Terminalden Ayrılmayınız!
  sleep 2
  clear
@@ -48,31 +56,33 @@ echo "${reset}Kurulum Başladı!"
  sleep 1
  clear
  echo $line
-  sudo apt-get update
-  sudo apt-get upgrade
-  sudo apt-get install snapd
-    #sudo apt-get install curl (Olurda debian depoları bozulursa.)
-  sudo apt --fix-broken install
+  echo e | sudo apt-get update
+  echo e | sudo apt-get upgrade
+  echo e | sudo apt-get install snapd
+    #echo e | sudo apt-get install curl (Olur da spotify için debian depoları bozulursa.)
+  echo e | sudo apt --fix-broken install
  echo $line
  sleep 1
 
 
 echo "${red}Ruby Kurulacak...${reset}"
  sleep 3
- sudo apt-get install ruby
-  sudo apt-get install gem
+  echo e | sudo apt-get install ruby
+  echo e | sudo apt-get install gem
  echo $line
  sleep 1
 
 
 echo "${cyan}Spotify Kurulacak...${reset}"
  sleep 3
- sudo apt install spotify-client
+  echo e | sudo apt --fix-broken install
+  echo e | sudo apt install spotify-client
  echo $line
  sleep 1
 
 
  <<comments
+   parGnome
      echo "${cyan}Spotify Kurulacak...${reset}"
      #Spotify'ı Debian depolarında göremediğim için depo ekledim.
       sleep 3
@@ -86,46 +96,53 @@ comments
 
 echo "${yellow}Git Kurulacak...${reset}"
  sleep 3
- sudo apt-get install git
+  echo e | sudo apt-get install git
+  #Git ayarlarını kendinize göre yapınız!
+   git config --global user.name "Ömer Ayyıldız" 
+   git config --global user.email "oayyildiz416@gmail.com"
  echo $line
  sleep 1
 
 
 echo "${cyan}Deepin System Monitor Kurulacak...${reset}"
  sleep 3
- sudo apt-get install deepin-system-monitor
+  echo e | sudo apt-get install deepin-system-monitor
  echo $line
  sleep 1
 
 
 echo "${cyan}Visual Studio Code Kurulacak...${reset}"
  sleep 3
- cd "${gps}/Setups/deb"
- sudo dpkg -i code_1.37.0-1565227985_amd64.deb
+  echo e | sudo apt --fix-broken install
+  cd /media/pardus/TUX/Pardus-AutoSetup/deb
+  sudo dpkg -i code_1.37.0-1565227985_amd64.deb
+  echo "${yellow}Eklentiler entegre ediliyor. Bu biraz zaman alabilir..."
+  cp -R /media/pardus/TUX/Pardus-AutoSetup/extensions /home/pardus/.vscode
+  echo "Her şey tamam! Devam edelim...${reset}"
  echo $line
  sleep 1
 
 
 echo "${magenta}Discord Kurulacak...${reset}"
  sleep 3
- sudo apt-get install discord
- sudo dpkg -i discord-0.0.9.deb
- sudo apt --fix-broken install
- sudo apt-get update
- sudo apt-get upgrade
+  echo e | sudo apt-get install discord
+  echo e | sudo dpkg -i discord-0.0.9.deb
+  echo e | sudo apt --fix-broken install
+  echo e | sudo apt-get update
+  echo e | sudo apt-get upgrade
  echo $line
  sleep 1
 
 
 echo Neofetch Kurulacak...
  sleep 3
- sudo apt-get install neofetch
+  echo e | sudo apt-get install neofetch
  echo $line
  sleep 1
 
 
 echo "${blue}Telegram Ev Dizinine Alınıyor...${reset}"
- cp -r "${gps}/Setups/tar/tsetup.1.6.7.tar.xz /home/pardus/"
+ cp -r /media/pardus/TUX/Pardus-AutoSetup/tar/tsetup.1.6.7.tar.xz /home/pardus/
  cd ~
  tar -xf tsetup.1.6.7.tar.xz
  rm tsetup.1.6.7.tar.xz
@@ -136,11 +153,39 @@ echo "${blue}Telegram Ev Dizinine Alınıyor...${reset}"
 
 echo "${red}Çöpler Dışarı Atılıyor..."
  sleep 3
- sudo apt-get autoremove
- sudo apt-get clean
+  echo e | sudo apt-get autoremove
+  echo e | sudo apt-get clean
  clear
  echo $line
  sleep 1
+
+
+echo "${yellow}Kurulumlar Kontrol Ediliyor...${reset}"
+  echo "Snap Ve Sistem Versiyon"
+   snap --version
+   echo $line
+  echo "Ruby Versiyon"
+   ruby --version
+   echo $line
+  echo "Gem Versiyon"
+   gem --version
+   echo $line
+  echo "Spotify Versiyon"
+   spotify --version
+   echo $line
+  echo "Deepin System Monitör Versiyonu"
+   deepin-system-monitor --version
+   echo $line
+  echo "Git Versiyon"
+   git --version
+   echo $line   
+  echo "VSCode Versiyon"
+   code --version
+   echo $line
+  echo "Neofetch Versiyon"
+   neofetch --version
+   echo $line
+sleep 10
 
 
 echo "${yellow}KURULUM TAMAMLANDI PROGREMCI!"
