@@ -20,7 +20,7 @@ bash setupGnome.sh
 ```
 ## **Kullanmadan Önce Yapmanız Gerekenler**
 
-- parGnome.sh ve parXfce.sh dosyalarının içindeki dosya yollarını ve Git ayarlarını kendinize uygun hale getirmek.
+
 
 - İndireceğiniz uygulamaların adlarını koda benzer şekilde eklemek ya da silmek.
 
@@ -31,13 +31,13 @@ bash setupGnome.sh
  ```
 E: /var/lib/dpkg/lock kilidi alınamadı - open (11: Özkaynak geçici olarak kullanılamaz durumda)
 
-E: Yönetim dizini (/var/lib/dpkg/) kilitlenemiyor, başka bir işlem tarafından kullanılıyor olmasın?
+E: Yönetim dizini (/var/lib/dpkg/)kilitlenemiyor, başka bir işlem tarafından kullanılıyor olmasın?
 ```
 hatasını alırsanız repair klasöründe bulunan apt-lock-error-solve.sh dosyasını çalıştırın.
 
 Bağımlılık hatası aldığınızda ise apt-repair.sh'ı çalıştırabilirsiniz.
 
-## **VSCode Ve Discord'u Güncellemek
+## **VSCode Ve Discord'u Güncellemek**
 Bunun için _upgrade-deb.sh_ dosyasını çalıştırın.
 
 Ömer Ayyıldız
