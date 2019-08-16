@@ -36,10 +36,7 @@ hatasını alırsanız repair klasöründe bulunan apt-lock-error-solve.sh dosya
 Bağımlılık hatası aldığınızda ise apt-repair.sh'ı çalıştırabilirsiniz.
 
 ## **VSCode Ve Discord'u Güncellemek**
+
 Bunun için _upgrade-deb.sh_ dosyasını çalıştırın.
-
-## **Son Sürüm İndirme Linki**
-
-https://github.com/omerayyildiz/Pardus-AutoSetup/releases/latest
 
 Ömer Ayyıldız
