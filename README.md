@@ -4,7 +4,7 @@
 
 ## **Pardus AutoSetup Nedir?**
 
-Live ya da normal kurulum sonrası açılan Pardus'a otomatik olarak belirlediğim uygulamaları indiren ve ayarlarımı yapan bir BASH Scripttir.
+ Live ya da normal kurulum sonrası açılan Pardus'a otomatik olarak belirlediğim uygulamaları indiren ve ayarlarımı yapan bir BASH Scripttir.
 
 ## **Nasıl Çalışır?**
 
@@ -22,8 +22,9 @@ bash setupGnome.sh
 
 - İndireceğiniz uygulamaların adlarını koda benzer şekilde eklemek ya da silmek.
 
- ## **Hata Anında Ne Yapmalıyım?**
- Uygulama içi hata vermemek adına sürekli apt onarılıyor ve güncelleniyor. Fakat bazı iptal etme durumlarında apt arızalanabiliyor.
+## **Hata Anında Ne Yapmalıyım?**
+
+  Uygulama içi hata vermemek adına sürekli apt onarılıyor ve güncelleniyor. Fakat bazı iptal etme durumlarında apt arızalanabiliyor.
 
  Eğer,
  ```
