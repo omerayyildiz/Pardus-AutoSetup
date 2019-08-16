@@ -20,8 +20,6 @@ bash setupGnome.sh
 ```
 ## **Kullanmadan Önce Yapmanız Gerekenler**
 
-
-
 - İndireceğiniz uygulamaların adlarını koda benzer şekilde eklemek ya da silmek.
 
  ## **Hata Anında Ne Yapmalıyım?**
@@ -39,5 +37,9 @@ Bağımlılık hatası aldığınızda ise apt-repair.sh'ı çalıştırabilirsi
 
 ## **VSCode Ve Discord'u Güncellemek**
 Bunun için _upgrade-deb.sh_ dosyasını çalıştırın.
+
+## **Son Sürüm İndirme Linki**
+
+https://github.com/omerayyildiz/Pardus-AutoSetup/releases/latest
 
 Ömer Ayyıldız
