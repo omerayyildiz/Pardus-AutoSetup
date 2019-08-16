@@ -22,7 +22,8 @@ bash setupGnome.sh
 
 - İndireceğiniz uygulamaların adlarını koda benzer şekilde eklemek ya da silmek.
 
- ## **Hata Anında Ne Yapmalıyım?**
+## **Hata Anında Ne Yapmalıyım?**
+ 
  Uygulama içi hata vermemek adına sürekli apt onarılıyor ve güncelleniyor. Fakat bazı iptal etme durumlarında apt arızalanabiliyor.
 
  Eğer,
