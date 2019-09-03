@@ -104,10 +104,10 @@ echo "${cyan}Deepin System Monitor Kurulacak...${reset}"
 echo "${cyan}Visual Studio Code Kurulacak...${reset}"
  sleep 1
   echo e | sudo apt --fix-broken install
-  cd /media/pardus/TUX/Pardus-AutoSetup/deb
+  cd /media/progremci/TUX/Pardus-AutoSetup/deb
   sudo dpkg -i code_1.37.0-1565227985_amd64.deb
   echo "${yellow}Eklentiler entegre ediliyor. Bu biraz zaman alabilir..."
-  cp -R /media/pardus/TUX/Pardus-AutoSetup/extensions /home/pardus/.vscode
+  cp -R /media/progremci/TUX/Pardus-AutoSetup/extensions /home/pardus/.vscode
   echo "Her şey tamam! Devam edelim...${reset}"
  echo $line
  sleep 1
@@ -131,7 +131,7 @@ echo Neofetch Kurulacak...
 
 
 echo "${blue}Telegram Ev Dizinine Alınıyor...${reset}"
- cp -r /media/pardus/TUX/Pardus-AutoSetup/tar/tsetup.1.6.7.tar.xz /home/pardus/
+ cp -r /media/progremci/TUX/Pardus-AutoSetup/tar/tsetup.1.6.7.tar.xz /home/pardus/
  cd ~
  tar -xf tsetup.1.6.7.tar.xz
  rm tsetup.1.6.7.tar.xz
