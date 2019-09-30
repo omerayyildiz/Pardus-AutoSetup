@@ -52,18 +52,20 @@ echo "${reset}Kurulum Başladı!"
   echo e | sudo apt --fix-broken install
  echo $line
  sleep 1
-
+ clear
 
 echo "${red}Ruby Kurulacak...${reset}"
+ echo $line
  sleep 1
   echo e | sudo apt-get install ruby 
    echo e | sudo apt-get install gem 
  echo $line
  sleep 1
-
+ clear
 
 echo "${cyan}Spotify Kurulacak...${reset}"
 #Spotify'ı Debian depolarında göremediğim için depo ekledim.
+ echo $line
  sleep 1
   echo e | sudo apt --fix-broken install
   curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
@@ -72,9 +74,10 @@ echo "${cyan}Spotify Kurulacak...${reset}"
   echo e | sudo apt-get install spotify-client
  echo $line
  sleep 1
-
+ clear
 
 echo "${yellow}Git Kurulacak...${reset}"
+ echo $line
  sleep 1
   echo e | sudo apt-get install git
   #Git ayarlarını kendinize göre yapınız!
@@ -82,21 +85,23 @@ echo "${yellow}Git Kurulacak...${reset}"
    git config --global user.email "oayyildiz416@gmail.com"
  echo $line
  sleep 1
-
+ clear
 
 echo "${cyan}Visual Studio Code Kurulacak...${reset}"
+ echo $line
  sleep 1
   echo e | sudo apt --fix-broken install
   cd /media/pardus/TUX/Pardus-AutoSetup/deb
-  sudo dpkg -i code_1.37.0-1565227985_amd64.deb
+  sudo dpkg -i code_1.38.1-1568209190_amd64.deb
     echo "${yellow}Eklentiler entegre ediliyor. Bu biraz zaman alabilir..."
       cp -R /media/pardus/TUX/Pardus-AutoSetup/extensions /home/pardus/.vscode
     echo "Her şey tamam! Devam edelim...${reset}"
  echo $line
  sleep 1
-
+ clear
 
 echo "${magenta}Discord Kurulacak...${reset}"
+echo $line
 sleep 1
   echo e | sudo apt-get update
   echo e | sudo apt-get upgrade
@@ -104,16 +109,18 @@ sleep 1
   echo e | sudo apt --fix-broken install
  echo $line
  sleep 1
-
+ clear
 
 echo Neofetch Kurulacak...
+ echo $line
  sleep 1
   echo e | sudo apt-get install neofetch
  echo $line
  sleep 1
-
+ clear
 
 echo "${blue}Telegram Ev Dizinine Alınıyor...${reset}"
+ echo $line
  cp -r /media/pardus/TUX/Pardus-AutoSetup/tar/tsetup.1.6.7.tar.xz /home/pardus/
  cd ~
  tar -xf tsetup.1.6.7.tar.xz
@@ -121,16 +128,18 @@ echo "${blue}Telegram Ev Dizinine Alınıyor...${reset}"
   echo Telegram Başarıyla Alındı!
   echo $line
  sleep 1
-
+ clear
 
 echo "${red}Çöpler Dışarı Atılıyor..."
+ echo $line
  sleep 1
   echo e | sudo apt-get autoremove
   echo e | sudo apt-get clean
  clear
  echo $line
  sleep 1
-
+ clear
+ 
 echo "${yellow}Kurulumlar Kontrol Ediliyor...${reset}"
   echo "Ruby Versiyon"
    ruby --version
