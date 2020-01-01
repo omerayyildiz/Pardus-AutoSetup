@@ -102,7 +102,7 @@ echo "${cyan}Visual Studio Code Kurulacak...${reset}"
  echo $line
  sleep 1
  clear
-<<comments
+
 echo "${magenta}Discord Kurulacak...${reset}"
 echo $line
 sleep 1
@@ -113,7 +113,7 @@ sleep 1
  echo $line
  sleep 1
  clear
-comments
+
 echo Neofetch Kurulacak...
  echo $line
  sleep 1
