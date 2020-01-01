@@ -38,6 +38,6 @@ Bağımlılık hatası aldığınızda ise apt-repair.sh'ı çalıştırabilirsi
 
 ## **VSCode Ve Discord'u Güncellemek**
 
-Bunun için _upgrade-deb.sh_ dosyasını çalıştırın.
+Bunun için parXFCE ya da parGnome dosyasının içinden oto indirilen dosya adını kopyalayıp koda entegre edin. (İleride giderilecek.)
 
 Ömer Ayyıldız

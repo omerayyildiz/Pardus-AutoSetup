@@ -50,6 +50,9 @@ echo "${reset}Kurulum Başladı!"
   echo e | sudo apt-get upgrade
   echo e | sudo apt-get install curl
   echo e | sudo apt --fix-broken install
+  firefox https://go.microsoft.com/fwlink/?LinkID=760868
+  echo "İndi!"
+  firefox https://discordapp.com/api/download?platform=linux&format=deb
  echo $line
  sleep 1
  clear
@@ -91,15 +94,15 @@ echo "${cyan}Visual Studio Code Kurulacak...${reset}"
  echo $line
  sleep 1
   echo e | sudo apt --fix-broken install
-  cd /h/Pardus-AutoSetup/deb
-  sudo dpkg -i code_1.38.1-1568209190_amd64.deb
+  cd /home/pardus/İndirilenler
+  sudo dpkg -i code_1.41.1-1576681836_amd64.deb
     echo "${yellow}Eklentiler entegre ediliyor. Bu biraz zaman alabilir..."
-      cp -R /h/Pardus-AutoSetup/extensions /home/pardus/.vscode
+      cp -R /media/pardus/TUX/Pardus-AutoSetup/extensions /home/pardus/.vscode
     echo "Her şey tamam! Devam edelim...${reset}"
  echo $line
  sleep 1
  clear
-
+<<comments
 echo "${magenta}Discord Kurulacak...${reset}"
 echo $line
 sleep 1
@@ -110,7 +113,7 @@ sleep 1
  echo $line
  sleep 1
  clear
-
+comments
 echo Neofetch Kurulacak...
  echo $line
  sleep 1
@@ -119,14 +122,10 @@ echo Neofetch Kurulacak...
  sleep 1
  clear
 
-echo "${blue}Telegram Ev Dizinine Alınıyor...${reset}"
+echo "${blue}Telegram İndiriliyor...${reset}"
  echo $line
- cp -r /h/Pardus-AutoSetup/tar/tsetup.1.6.7.tar.xz /home/pardus/
- cd ~
- tar -xf tsetup.1.6.7.tar.xz
- rm tsetup.1.6.7.tar.xz
-  echo Telegram Başarıyla Alındı!
-  echo $line
+  echo e | sudo apt-get install telegram-desktop
+ echo $line
  sleep 1
  clear
 
