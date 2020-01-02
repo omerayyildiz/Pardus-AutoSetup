@@ -46,13 +46,24 @@ echo "${reset}Kurulum Başladı!"
  sleep 1
  clear
  echo $line
+  echo "${blue}Kurulum Paketleri Güncelleniyor...${reset}"
+  echo $line
+      echo e | sudo apt-get install curl
+     cd /home/pardus/İndirilenler
+       curl -O https://dl.discordapp.net/apps/linux/0.0.9/discord-0.0.9.deb
+      echo $line
+       curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+       sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+       sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+        echo e | sudo apt-get install apt-transport-https
+      echo $line
+  
   echo e | sudo apt-get update
   echo e | sudo apt-get upgrade
-  echo e | sudo apt-get install curl
   echo e | sudo apt --fix-broken install
-  firefox https://go.microsoft.com/fwlink/?LinkID=760868
-  echo "İndi!"
-  firefox https://discordapp.com/api/download?platform=linux&format=deb
+  #firefox https://go.microsoft.com/fwlink/?LinkID=760868
+  #echo "İndi!"
+  #firefox https://discordapp.com/api/download?platform=linux&format=deb
  echo $line
  sleep 1
  clear
@@ -94,10 +105,14 @@ echo "${cyan}Visual Studio Code Kurulacak...${reset}"
  echo $line
  sleep 1
   echo e | sudo apt --fix-broken install
-  cd /home/pardus/İndirilenler
-  sudo dpkg -i code_1.41.1-1576681836_amd64.deb
+  echo e | sudo apt-get install code
+  #cd /home/pardus/İndirilenler   manuel deb paketi burada
+  #sudo dpkg -i code_1.41.1-1576681836_amd64.deb
     echo "${yellow}Eklentiler entegre ediliyor. Bu biraz zaman alabilir..."
-      cp -R /media/pardus/TUX/Pardus-AutoSetup/extensions /home/pardus/.vscode
+      cp -R /media/pardus/TUX/Pardus-AutoSetup/extensions /home/pardus/.vscode/
+      cd /home/pardus/.vscode
+      tar xvf extensions.tar.xz
+      rm extensions.tar.xz
     echo "Her şey tamam! Devam edelim...${reset}"
  echo $line
  sleep 1
@@ -106,6 +121,7 @@ echo "${cyan}Visual Studio Code Kurulacak...${reset}"
 echo "${magenta}Discord Kurulacak...${reset}"
 echo $line
 sleep 1
+ cd /home/pardus/İndirilenler
   echo e | sudo apt-get update
   echo e | sudo apt-get upgrade
   sudo dpkg -i discord-0.0.9.deb
