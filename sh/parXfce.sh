@@ -44,17 +44,27 @@ echo "${blue}Kurulum Hazırlanıyor..."
 echo Kurulum Başlıyor... Lütfen Terminalden Ayrılmayınız!
  sleep 2
  clear
-echo "${reset}Kurulum Başladı!" 
+echo "${blue}Kurulum Paketleri Güncelleniyor...${reset}"
+  echo $line
+      echo e | sudo apt-get install curl
+     cd /home/pardus/İndirilenler
+       curl -O https://dl.discordapp.net/apps/linux/0.0.9/discord-0.0.9.deb
+      echo $line
+       curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+       sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+       sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+        echo e | sudo apt-get install apt-transport-https
+      echo $line
+  
+  echo e | sudo apt-get update
+  echo e | sudo apt-get upgrade
+  echo e | sudo apt --fix-broken install
+  #firefox https://go.microsoft.com/fwlink/?LinkID=760868
+  #echo "İndi!"
+  #firefox https://discordapp.com/api/download?platform=linux&format=deb
+ echo $line
  sleep 1
  clear
- echo $line
-  echo e | sudo apt-get update
-  echo e | sudo apt-get upgrade   
-  echo e | sudo apt --fix-broken install
-  firefox https://go.microsoft.com/fwlink/?LinkID=760868
-  firefox https://discordapp.com/api/download?platform=linux&format=deb
- echo $line
- sleep 1
 
 
 echo "${red}Ruby Kurulacak...${reset}"
@@ -66,24 +76,14 @@ echo "${red}Ruby Kurulacak...${reset}"
 
 
 echo "${cyan}Spotify Kurulacak...${reset}"
- sleep 1
+#Spotify'ı Debian depolarında göremediğim için depo ekledim.
+ sleep 3
   echo e | sudo apt --fix-broken install
-  echo e | sudo apt install spotify-client
+  curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
+  echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+  sudo apt-get update && sudo apt-get install spotify-client
  echo $line
  sleep 1
-
-
- <<comments
-   parGnome
-     echo "${cyan}Spotify Kurulacak...${reset}"
-     #Spotify'ı Debian depolarında göremediğim için depo ekledim.
-      sleep 3
-      curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
-      echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-      sudo apt-get update && sudo apt-get install spotify-client
-      echo $line
-      sleep 1
-comments
 
 
 echo "${yellow}Git Kurulacak...${reset}"
@@ -104,28 +104,37 @@ echo "${cyan}Deepin System Monitor Kurulacak...${reset}"
 
 
 echo "${cyan}Visual Studio Code Kurulacak...${reset}"
- sleep 1
-  echo e | sudo apt --fix-broken install
-  cd /home/pardus/İndirilenler
-  sudo dpkg -i code_1.41.1-1576681836_amd64.deb
-  echo "${yellow}Eklentiler entegre ediliyor. Bu biraz zaman alabilir..."
-  cp -R /media/pardus/TUX/Pardus-AutoSetup/extensions /home/pardus/.vscode
-  echo "Her şey tamam! Devam edelim...${reset}"
  echo $line
  sleep 1
+  echo e | sudo apt --fix-broken install
+  echo e | sudo apt-get install code
+  #cd /home/pardus/İndirilenler   manuel deb paketi burada
+  #sudo dpkg -i code_1.41.1-1576681836_amd64.deb
+    echo "${yellow}Eklentiler entegre ediliyor. Bu biraz zaman alabilir..."
+      cp -R /media/pardus/TUX/Pardus-AutoSetup/extensions /home/pardus/.vscode/
+      cd /home/pardus/.vscode
+      tar xvf extensions.tar.xz
+      rm extensions.tar.xz
+    echo "Her şey tamam! Devam edelim...${reset}"
+ echo $line
+ sleep 1
+ clear
 
 
 echo "${magenta}Discord Kurulacak...${reset}"
- sleep 1
-  echo e | sudo dpkg -i discord-0.0.9.deb
-  echo e | sudo apt --fix-broken install
+echo $line
+sleep 1
+ cd /home/pardus/İndirilenler
   echo e | sudo apt-get update
   echo e | sudo apt-get upgrade
+  sudo dpkg -i discord-0.0.9.deb
+  echo e | sudo apt --fix-broken install
  echo $line
  sleep 1
+ clear1
 
 
-echo Neofetch Kurulacak...
+echo "Neofetch Kurulacak..."
  sleep 1
   echo e | sudo apt-get install neofetch
  echo $line

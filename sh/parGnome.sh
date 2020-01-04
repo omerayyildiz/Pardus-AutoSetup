@@ -130,7 +130,7 @@ sleep 1
  sleep 1
  clear
 
-echo Neofetch Kurulacak...
+echo "Neofetch Kurulacak..."
  echo $line
  sleep 1
   echo e | sudo apt-get install neofetch
