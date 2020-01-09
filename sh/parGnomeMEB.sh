@@ -77,6 +77,7 @@ echo "${red}Ruby Kurulacak...${reset}"
  sleep 1
  clear
 
+<<comments
 echo "${cyan}Spotify Kurulacak...${reset}"
 #Spotify'ı Debian depolarında göremediğim için depo ekledim.
  echo $line
@@ -89,6 +90,7 @@ echo "${cyan}Spotify Kurulacak...${reset}"
  echo $line
  sleep 1
  clear
+comments
 
 echo "${yellow}Git Kurulacak...${reset}"
  echo $line
@@ -109,7 +111,7 @@ echo "${cyan}Visual Studio Code Kurulacak...${reset}"
   #cd /home/pardus/İndirilenler   manuel deb paketi burada
   #sudo dpkg -i code_1.41.1-1576681836_amd64.deb
     echo "${yellow}Eklentiler entegre ediliyor. Bu biraz zaman alabilir..."
-      cp -R /media/pardus/TUX/Pardus-AutoSetup/extensions /home/pardus/.vscode/        
+      cp -R /media/pardus/TUX/Pardus-AutoSetup/extensions /home/pardus/.vscode/
       cd /home/pardus/.vscode
       tar xvf extensions.tar.xz
       rm extensions.tar.xz
@@ -118,6 +120,7 @@ echo "${cyan}Visual Studio Code Kurulacak...${reset}"
  sleep 1
  clear
 
+<<comments
 echo "${magenta}Discord Kurulacak...${reset}"
 echo $line
 sleep 1
@@ -129,6 +132,7 @@ sleep 1
  echo $line
  sleep 1
  clear
+comments
 
 echo "Neofetch Kurulacak..."
  echo $line
@@ -138,12 +142,14 @@ echo "Neofetch Kurulacak..."
  sleep 1
  clear
 
+<<comments
 echo "${blue}Telegram İndiriliyor...${reset}"
  echo $line
   echo e | sudo apt-get install telegram-desktop
  echo $line
  sleep 1
  clear
+comments
 
 echo "${red}Çöpler Dışarı Atılıyor..."
  echo $line
