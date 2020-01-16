@@ -25,21 +25,24 @@ comments
 
 #Değişkenler
 yellow=`tput setaf 3`
-blue=`tput setaf 4`
+blue=`tput setaf 4`          
 red=`tput setaf 1`
-cyan=`tput setaf 6`
+cyan=`tput setaf 6`                              
 magenta=`tput setaf 5`
 reset=`tput sgr0`
 line="--------------------------------------"
 clear
 
-echo "${yellow}Progremci Debian AutoSetup™${reset}"
+echo "${yellow}Macrowl Debian AutoSetup™${reset}"
  sleep 2
  clear
 
 echo "${blue}Kurulum Hazırlanıyor..."
  sleep 1 
 echo Kurulum Başlıyor... Lütfen Terminalden Ayrılmayınız!
+  cd /media/pardus/TUX/Pardus-AutoSetup/gui-settings
+  cat dconf-settings.ini | dconf load /
+  cp -R /media/pardus/TUX/HURRA/Wallpapers/    /home/pardus/Resimler/
  sleep 1
  clear
 echo "${reset}Kurulum Başladı!" 
@@ -94,8 +97,8 @@ echo "${yellow}Git Kurulacak...${reset}"
  echo $line
  sleep 1
   echo e | sudo apt-get install git
-  #Git ayarlarını kendinize göre yapınız!
-   git config --global user.name "Ömer Ayyıldız" 
+  #Git ayarlarını kendinize göre yapınız! 
+   git config --global user.name "Ömer Ayyıldız"
    git config --global user.email "oayyildiz416@gmail.com"
  echo $line
  sleep 1
@@ -185,4 +188,4 @@ echo "${reset}progremci.com"
  echo $line 
   neofetch
  echo ":)"
-exit
+exit 
