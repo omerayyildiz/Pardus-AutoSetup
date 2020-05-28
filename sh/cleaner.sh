@@ -1,3 +1,5 @@
+#!/bin/sh
+#clean system cache
 echo e | sudo apt-get autoremove
 sudo du -sh /var/cache/apt
 sudo apt-get autoclean

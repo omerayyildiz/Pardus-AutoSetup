@@ -23,7 +23,7 @@ Num  Colour    #define         R G B
 7    white     COLOR_WHITE     1,1,1
 comments
 
-#Değişkenler
+#Variables
 yellow=`tput setaf 3`
 blue=`tput setaf 4`          
 red=`tput setaf 1`
@@ -33,26 +33,29 @@ reset=`tput sgr0`
 line="--------------------------------------"
 clear
 
-echo "${yellow}Macrowl Debian AutoSetup™${reset}"
+
+
+echo "${yellow}Pardus-AutoSetup™ for omerayyildiz${reset}"
  sleep 2
  clear
-
-echo "${blue}Kurulum Hazırlanıyor..."
+echo "${blue}Arayüz Hazırlanıyor..."
  sleep 1 
 echo Kurulum Başlıyor... Lütfen Terminalden Ayrılmayınız!
+  #gui-settings config file loading to home directory
   cd /media/pardus/TUX/Pardus-AutoSetup/gui-settings
-  cat dconf-settings.ini | dconf load /
-  cp -R /media/pardus/TUX/HURRA/Wallpapers/    /home/pardus/Resimler/
- sleep 1
- clear
+  cat dconf-settings.ini | dconf load / #gui-settings (be like MacOS)
+  sleep 1
+  clear
+
 echo "${reset}Kurulum Başladı!" 
  sleep 1
  clear
  echo $line
+  #Visual Studio Code and Discord deb file install
   echo "${blue}Kurulum Paketleri Güncelleniyor...${reset}"
   echo $line
       echo e | sudo apt-get install curl
-     cd /home/pardus/İndirilenler
+     cd ~/İndirilenler
        curl -O https://dl.discordapp.net/apps/linux/0.0.9/discord-0.0.9.deb
       echo $line
        curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -63,25 +66,23 @@ echo "${reset}Kurulum Başladı!"
   
   echo e | sudo apt-get update
   echo e | sudo apt-get upgrade
-  echo e | sudo apt --fix-broken install
-  #firefox https://go.microsoft.com/fwlink/?LinkID=760868
-  #echo "İndi!"
-  #firefox https://discordapp.com/api/download?platform=linux&format=deb
- echo $line
- sleep 1
- clear
+  echo e | sudo apt --fix-broken install #repair dpkg
+  echo $line
+  sleep 1
+  clear
 
+#If you want change main programming language, change package name.
 echo "${red}Ruby Kurulacak...${reset}"
  echo $line
  sleep 1
   echo e | sudo apt-get install ruby 
-   echo e | sudo apt-get install gem 
+  echo e | sudo apt-get install gem 
  echo $line
  sleep 1
  clear
 
 echo "${cyan}Spotify Kurulacak...${reset}"
-#Spotify'ı Debian depolarında göremediğim için depo ekledim.
+#Spotify deb package manuel install
  echo $line
  sleep 1
   echo e | sudo apt --fix-broken install
@@ -97,9 +98,16 @@ echo "${yellow}Git Kurulacak...${reset}"
  echo $line
  sleep 1
   echo e | sudo apt-get install git
-  #Git ayarlarını kendinize göre yapınız! 
-   git config --global user.name "Ömer Ayyıldız"
-   git config --global user.email "oayyildiz416@gmail.com"
+   clear
+  
+  echo $line
+  echo "${yellow}IF YOU DON'T USE GIT, PRESS ENTER${reset}"
+   echo "${cyan}Please give your 'Full Name' for Git:${reset}"
+    read gitUsername
+   echo "${cyan}And email:${reset}"
+    read gitEmail  
+  git config --global user.name "$gitUsername"
+  git config --global user.email "$gitEmail" 
  echo $line
  sleep 1
  clear
@@ -109,14 +117,6 @@ echo "${cyan}Visual Studio Code Kurulacak...${reset}"
  sleep 1
   echo e | sudo apt --fix-broken install
   echo e | sudo apt-get install code
-  #cd /home/pardus/İndirilenler   manuel deb paketi burada
-  #sudo dpkg -i code_1.41.1-1576681836_amd64.deb
-    echo "${yellow}Eklentiler entegre ediliyor. Bu biraz zaman alabilir..."
-      cp -R /media/pardus/TUX/Pardus-AutoSetup/extensions /home/pardus/.vscode/        
-      cd /home/pardus/.vscode
-      tar xvf extensions.tar.xz
-      rm extensions.tar.xz
-    echo "Her şey tamam! Devam edelim...${reset}"
  echo $line
  sleep 1
  clear
@@ -124,7 +124,7 @@ echo "${cyan}Visual Studio Code Kurulacak...${reset}"
 echo "${magenta}Discord Kurulacak...${reset}"
 echo $line
 sleep 1
- cd /home/pardus/İndirilenler
+ cd ~/İndirilenler
   echo e | sudo apt-get update
   echo e | sudo apt-get upgrade
   sudo dpkg -i discord-0.0.9.deb
@@ -179,13 +179,13 @@ echo "${yellow}Kurulumlar Kontrol Ediliyor...${reset}"
    echo $line
 sleep 10
 
-echo "${yellow}KURULUM TAMAMLANDI PROGREMCI!"
+echo "${yellow}KURULUM TAMAMLANDI"
  sleep 1
   clear
-echo "${reset}progremci.com"
+echo "${reset}github.com/omerayyildiz"
  sleep 2
   clear
  echo $line 
   neofetch
- echo ":)"
+ echo "STAY AT HOME :)"
 exit 

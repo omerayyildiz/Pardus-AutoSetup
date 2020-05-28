@@ -1,6 +1,6 @@
 # Pardus AutoSetup 
 ## **Pardus Otomatik Kurulum Aracı**
-![Pardus Resim](https://www.ankarakreatif.com/uploads/haberler/1534682669pardus-isletim-sistemi-png.png)
+![Pardus Resim](/images/photo1.jpg)
 
 ## **Pardus AutoSetup Nedir?**
 
@@ -36,8 +36,7 @@ hatasını alırsanız repair klasöründe bulunan apt-lock-error-solve.sh dosya
 
 Bağımlılık hatası aldığınızda ise apt-repair.sh'ı çalıştırabilirsiniz.
 
-## **VSCode Ve Discord'u Güncellemek**
-
-Bunun için parXFCE ya da parGnome dosyasının içinden oto indirilen dosya adını kopyalayıp koda entegre edin. (İleride giderilecek.)
+## **ÖNEMLİ NOT**
+Klasör adları Pardus'ta Türkçe olduğundan dolayı İngilizce kurulum halinde hata ile karşılaşmamak adına **"~/İndirilenler"** adlı klasör yollarını **"~/Downloads"** olarak değiştirmeyi unutmayınız.
 
 Ömer Ayyıldız
