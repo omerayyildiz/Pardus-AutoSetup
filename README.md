@@ -1,8 +1,10 @@
 # Pardus AutoSetup 
 ## **Pardus Otomatik Kurulum Aracı**
-[![GitHub license](https://img.shields.io/github/license/omerayyildiz/Pardus-AutoSetup)](https://github.com/omerayyildiz/Pardus-AutoSetup/blob/master/LICENSE) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/omerayyildiz/Pardus-AutoSetup) ![GitHub repo size](https://img.shields.io/github/repo-size/omerayyildiz/Pardus-AutoSetup) 
-
 ![Pardus Resim](/images/photo1.jpg)
+
+[![GitHub license](https://img.shields.io/github/license/omerayyildiz/Pardus-AutoSetup)](https://github.com/omerayyildiz/Pardus-AutoSetup/blob/master/LICENSE) 
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/omerayyildiz/Pardus-AutoSetup)
+![GitHub repo size](https://img.shields.io/github/repo-size/omerayyildiz/Pardus-AutoSetup)
 
 ## **Pardus AutoSetup Nedir?**
 
