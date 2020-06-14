@@ -45,8 +45,8 @@ Klasör adları Pardus'ta Türkçe olduğundan dolayı İngilizce kurulum halind
 
 ## **Örnek Kurulumlar**
 
-version 2.0.0: https://www.youtube.com/watch?v=cSXQsUMQ4z8
+[version 2.0](https://www.youtube.com/watch?v=cSXQsUMQ4z8)
 
-version 1.0.0: https://www.youtube.com/watch?v=QkfiUk5FyQc
+[version 1.0](https://www.youtube.com/watch?v=QkfiUk5FyQc)
 
 Ömer Ayyıldız
