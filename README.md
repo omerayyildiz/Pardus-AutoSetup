@@ -45,6 +45,8 @@ Klasör adları Pardus'ta Türkçe olduğundan dolayı İngilizce kurulum halind
 
 ## **Örnek Kurulumlar**
 
+[version 3.0](https://www.youtube.com/watch?v=4H4pc_ZkUGM)
+
 [version 2.0](https://www.youtube.com/watch?v=cSXQsUMQ4z8)
 
 [version 1.0](https://www.youtube.com/watch?v=QkfiUk5FyQc)
