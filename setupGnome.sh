@@ -59,7 +59,7 @@ read -p "${cyan}Eklemek İstediğiniz Ek Paketler Var Mı?${reset} ${yellow}(e/h
                     if [ $counter -eq $packagePiece ]
                     then
                       date=$(date)
-                      addCompleted="#Date:$date\necho "KURULUM TAMAMLANDI"\nsleep 1\nclear\necho "github.com/omerayyildiz"\nsleep 2\nclear\necho $line\nneofetch\necho "you are the most precious :)"\nexit\n"
+                      addCompleted="#Date:$date\necho 'KURULUM TAMAMLANDI'\nsleep 1\nclear\necho 'github.com/omerayyildiz'\nsleep 2\nclear\necho $line\nneofetch\necho 'you are the most precious :)'\nexit\n$line"
                       echo -e $addCompleted >> container.sh
                     done
             CHANGED_PACKAGES="e" #I added CHANGED_PACKAGES to decide if the program should branch   
