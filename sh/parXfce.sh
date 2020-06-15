@@ -38,6 +38,14 @@ clear
 echo "${yellow}Pardus-AutoSetup™ for omerayyildiz${reset}"
  sleep 2
  clear
+echo "${blue}Arayüz Hazırlanıyor..."
+ sleep 1 
+echo Kurulum Başlıyor... Lütfen Terminalden Ayrılmayınız!
+  #gui-settings config file loading to home directory
+  cd /media/pardus/TUX/Pardus-AutoSetup/gui-settings
+  cat dconf-settings.ini | dconf load / #gui-settings (be like MacOS)
+  sleep 1
+  clear
 
 echo "${reset}Kurulum Başladı!" 
  sleep 1
@@ -63,12 +71,15 @@ echo "${reset}Kurulum Başladı!"
   sleep 1
   clear
 
-#If you want change main programming language, change package name.
-echo "${red}Ruby Kurulacak...${reset}"
+
+echo "${red}$PROGLANG Kurulacak...${reset}"
  echo $line
  sleep 1
-  echo e | sudo apt-get install ruby 
-  echo e | sudo apt-get install gem 
+  echo e | sudo apt-get install $PROGLANG 
+  if [ $PROGLANG == "ruby" ]
+  then
+    echo e | sudo apt-get install gem 
+  fi
  echo $line
  sleep 1
  clear
@@ -93,13 +104,10 @@ echo "${yellow}Git Kurulacak...${reset}"
    clear
   
   echo $line
-  echo "${yellow}IF YOU DON'T USE GIT, PRESS ENTER${reset}"
-   echo "${cyan}Please give your 'Full Name' for Git:${reset}"
-    read gitUsername
-   echo "${cyan}And email:${reset}"
-    read gitEmail  
-  git config --global user.name "$gitUsername"
-  git config --global user.email "$gitEmail" 
+  echo "${yellow}Git Ayarlanıyor...${reset}"
+   git config --global user.name "$GITUSERNAME"
+   git config --global user.email "$GITEMAIL" 
+  echo "${yellow}Git Ayarlandı!${reset}"
  echo $line
  sleep 1
  clear
@@ -169,7 +177,21 @@ echo "${yellow}Kurulumlar Kontrol Ediliyor...${reset}"
   echo "Neofetch Versiyon"
    neofetch --version
    echo $line
-sleep 10
+sleep 5
+clear
+
+echo "${cyan}Ek Kurulum Olup Olmadığı Denetleniyor...${reset}"
+echo $line
+
+if [ $CHANGED_PACKAGES == "e" ] 
+ then
+   clear
+   echo "EK KURULUMLAR ÇALIŞACAK..."
+   echo $line
+     cd  /media/pardus/TUX/Pardus-AutoSetup/sh && ./container.sh
+ else
+  echo "EK KURULUM BULUNAMADI!"
+fi
 
 echo "${yellow}KURULUM TAMAMLANDI"
  sleep 1
