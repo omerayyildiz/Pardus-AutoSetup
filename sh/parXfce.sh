@@ -71,8 +71,7 @@ echo $line
 sleep 1
 clear
 
-
-redHeader=(echo ${PROGLANG^})
+redHeader=$(echo ${PROGLANG^})
 echo "${red}$redHeader Kurulacak...${reset}"
 echo $line
 sleep 1
