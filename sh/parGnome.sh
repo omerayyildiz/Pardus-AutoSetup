@@ -109,7 +109,7 @@ git config --global user.name "$GITUSERNAME"
 git config --global user.email "$GITEMAIL"
 echo "${yellow}Git Ayarlandı!${reset}"
 echo $line
-sleep 1
+sleep 2
 clear
 
 echo "${cyan}Visual Studio Code Kurulacak...${reset}"
@@ -182,6 +182,7 @@ clear
 
 echo "${cyan}Ek Kurulum Olup Olmadığı Denetleniyor...${reset}"
 echo $line
+sleep 2
 
 if [ $CHANGED_PACKAGES == "e" ]
 then
@@ -195,7 +196,7 @@ else
 fi
 
 echo "${yellow}KURULUM TAMAMLANDI"
-sleep 1
+sleep 3
 clear
 echo "${reset}github.com/omerayyildiz"
 sleep 2
