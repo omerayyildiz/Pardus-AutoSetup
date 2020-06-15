@@ -53,14 +53,14 @@ then
             echo "${magenta}BAŞARILI!${reset}"
             echo $line
             packageName=$(echo $packageName | tr "[A-Z]" "[a-z]")
-            packageCode="echo '$packageName Kurulacak...'\necho $line\nsleep 1\necho e | sudo apt-get install $packageName\necho $line\nsleep 1\nclear\n#end of package template code dude \n"
+            packageCode="\necho '$packageName Kurulacak...'\necho $line\nsleep 1\necho e | sudo apt-get install $packageName\necho $line\nsleep 1\nclear\n#end of package template code dude \n"
             echo -e $packageCode >> container.sh #container.sh isolated from main script because I couldn't find "push text directly to file" algorithn :D
             counter=$((counter+1))
             
             if [ $counter -eq $packagePiece ]
             then
                 date=$(date)
-                addCompleted="#Date:$date\necho 'KURULUM TAMAMLANDI'\nsleep 1\nclear\necho 'github.com/omerayyildiz'\nsleep 2\nclear\necho $line\nneofetch\necho 'you are the most precious :)'\nexit\n$line"
+                addCompleted="#Date:$date\necho 'KURULUM TAMAMLANDI'\nsleep 1\nclear\necho 'github.com/omerayyildiz'\nsleep 2\nclear\necho $line\nneofetch\necho 'You are the most precious :)'\n$line"
                 echo -e $addCompleted >> container.sh
             fi
         done
