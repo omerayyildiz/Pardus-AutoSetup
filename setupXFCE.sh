@@ -15,7 +15,7 @@ sed -i "s|/media/pardus/TUX/Pardus-AutoSetup/|$(pwd)/|g" setupXFCE.sh
 cd sh
 sed -i "s|/media/pardus/TUX/Pardus-AutoSetup/|$(cd .. && pwd)/|g" parGnome.sh
 sed -i "s|/media/pardus/TUX/Pardus-AutoSetup/|$(cd .. && pwd)/|g" parXfce.sh
-
+clear
 
 echo "${yellow}KURULUM BAŞLATICISINA HOŞGELDİNİZ!${reset}"
 echo $line
@@ -60,7 +60,7 @@ then
             if [ $counter -eq $packagePiece ]
             then
                 date=$(date)
-                addCompleted="#Date:$date\necho 'KURULUM TAMAMLANDI'\nsleep 1\nclear\necho 'github.com/omerayyildiz'\nsleep 2\nclear\necho $line\nneofetch\necho 'You are the most precious :)'\n$line"
+                addCompleted="#Date:$date\necho 'KURULUM TAMAMLANDI'\nsleep 1\nclear\necho 'github.com/omerayyildiz'\nsleep 2\nclear\necho $line\nneofetch\necho 'You are the most precious :)'\necho $line"
                 echo -e $addCompleted >> container.sh
             fi
         done
@@ -79,6 +79,7 @@ else
     clear
 fi
 
+clear
 echo "${magenta}SON BİR ADIM KALDI!${reset}"
 echo $line
 echo "GIT KULLANMIYOR İSENİZ ENTERE BASIN!"

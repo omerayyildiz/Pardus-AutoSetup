@@ -24,7 +24,7 @@ bash setupGnome.sh
 ```
 ## **Kullanmadan Önce Yapmanız Gerekenler**
 
-- İndireceğiniz uygulamaların adlarını koda benzer şekilde eklemek ya da silmek.
+- Ön kurulumda bulunan alanları doğru doldurmanız ve gerekli tüm paketlerin sayısını ve adlarını ilgili alanlara girmeniz yeterli olacaktır.
 
 ## **Hata Anında Ne Yapmalıyım?**
  

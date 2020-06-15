@@ -71,8 +71,8 @@ echo $line
 sleep 1
 clear
 
-
-echo "${red}$PROGLANG Kurulacak...${reset}"
+redHeader=(echo ${PROGLANG^})
+echo "${red}$redHeader Kurulacak...${reset}"
 echo $line
 sleep 1
 echo e | sudo apt-get install $PROGLANG
