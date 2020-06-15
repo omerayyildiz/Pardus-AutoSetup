@@ -81,7 +81,7 @@ fi
 echo "${magenta}SON BİR ADIM KALDI!${reset}"
    echo $line
    read -p "${cyan}Git Kullanıcı Adınızı Ayarlayın${reset} ${yellow}(user.name):${reset}" GITUSERNAME
-   read -p "${yellow}Git Emailinizi Ayarlayın${reset} ${yellow}(user.email):${reset}" GITEMAIL
+   read -p "${cyan}Git Emailinizi Ayarlayın${reset} ${yellow}(user.email):${reset}" GITEMAIL
       clear
       
       echo "${magenta}Git Config Ayarlarınız Şekildeki Gibidir!${reset}"
@@ -94,7 +94,7 @@ echo "${magenta}SON BİR ADIM KALDI!${reset}"
     if [ $gitAnswer == 'e' ]
     then
        read -p "${cyan}Git Kullanıcı Adınızı Ayarlayın${reset} ${yellow}(user.name):${reset}" GITUSERNAME
-       read -p "${yellow}Git Emailinizi Ayarlayın${reset} ${yellow}(user.email):${reset}" GITEMAIL
+       read -p "${cyan}Git Emailinizi Ayarlayın${reset} ${yellow}(user.email):${reset}" GITEMAIL
     fi
       echo "${magenta}Ayarlarınız Git Kurulumu İçin Beklemeye Alındı!${reset}"
       sleep 2
