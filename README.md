@@ -1,34 +1,37 @@
 # Pardus AutoSetup 
 ## **Pardus Otomatik Kurulum Aracı**
-![Pardus Resim](/images/photo1.jpg)
+![Pardus Resim](sources/images/photo1.jpg)
 
 [![GitHub license](https://img.shields.io/github/license/omerayyildiz/Pardus-AutoSetup)](https://github.com/omerayyildiz/Pardus-AutoSetup/blob/master/LICENSE) 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/omerayyildiz/Pardus-AutoSetup)
 ![GitHub repo size](https://img.shields.io/github/repo-size/omerayyildiz/Pardus-AutoSetup)
 
-## **Pardus AutoSetup Nedir?**
+## **Pardus AutoSetup Nedir?** / What is the Pardus AutoSetup?
 
 Live ya da normal kurulum sonrası açılan Pardus'a otomatik olarak belirlediğim uygulamaları indiren ve ayarlarımı yapan bir BASH Scripttir.
 
-## **Nasıl Çalışır?**
+It is a BASH Script that downloads the applications I set automatically to Pardus that opens after Live or normal installation and makes my settings.
 
- Ana dizinde bulunan kurulum başlatıcılarından, kullandığınız Pardus dağıtımına göre çalıştırınız.
+## **Nasıl Çalışır?** / How does it works?
 
- XFCE Kurulum:
- ```bash
- bash setupXFCE.sh
- ```
- Gnome Kurulum:
+ Ana dizinde bulunan setup.sh dosyasını çalıştırın.
+
+ Run the setup.sh file in the main directory.
+ 
 ```bash
-bash setupGnome.sh
+bash setup.sh
 ```
-## **Kullanmadan Önce Yapmanız Gerekenler**
+## **Kullanmadan Önce Yapmanız Gerekenler** / What You Should Do Before Using
 
 - Ön kurulumda bulunan alanları doğru doldurmanız ve gerekli tüm paketlerin sayısını ve adlarını ilgili alanlara girmeniz yeterli olacaktır.
 
-## **Hata Anında Ne Yapmalıyım?**
+- It will be enough to fill the fields in the pre-installation correctly and enter the number and names of all required packages in the relevant fields.
+
+## **Hata Anında Ne Yapmalıyım?** / What Should I Do Instantly?
  
  Uygulama içi hata vermemek adına sürekli apt onarılıyor ve güncelleniyor. Fakat bazı iptal etme durumlarında apt arızalanabiliyor.
+
+ Apt is constantly being repaired and updated to avoid in-app errors. However, in some cancellation cases, the apt may fail.
 
  Eğer,
  ```
@@ -38,12 +41,13 @@ E: Yönetim dizini (/var/lib/dpkg/)kilitlenemiyor, başka bir işlem tarafından
 ```
 hatasını alırsanız repair klasöründe bulunan apt-lock-error-solve.sh dosyasını çalıştırın.
 
+If you get this kind of error, run the apt-lock-error-solve.sh file.
+
 Bağımlılık hatası aldığınızda ise apt-repair.sh'ı çalıştırabilirsiniz.
 
-## **ÖNEMLİ NOT**
-Klasör adları Pardus'ta Türkçe olduğundan dolayı İngilizce kurulum halinde hata ile karşılaşmamak adına **"~/İndirilenler"** adlı klasör yollarını **"~/Downloads"** olarak değiştirmeyi unutmayınız.
+When you get apt error, you can run apt-repair.sh.
 
-## **Örnek Kurulumlar**
+## **Örnek Kurulumlar** / Example Installation
 
 [version 3.0](https://www.youtube.com/watch?v=4H4pc_ZkUGM)
 
