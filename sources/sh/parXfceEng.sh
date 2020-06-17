@@ -16,7 +16,6 @@ clear
 
 echo "${blue}Upload Graphics Settings..."
 sleep 1
-echo Kurulum Başlıyor... Lütfen Terminalden Ayrılmayınız!
  #gui-settings config file loading to home directory
   cd /media/pardus/TUX/Pardus-AutoSetup/gui-settings
   cat dconf-settings.ini | dconf load / #gui-settings (be like MacOS)
@@ -49,7 +48,7 @@ sleep 1
 clear
 
 redHeader=$(echo ${PROGLANG^}) #for uppercase
-  echo "${red}Installing $redHeader ...${reset}"
+  echo "${red}Installing $redHeader...${reset}"
 echo $line
 sleep 1
   echo e | sudo apt-get install $PROGLANG

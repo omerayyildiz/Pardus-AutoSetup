@@ -44,12 +44,15 @@ then
     if [ $packageAnswer == 'y' ]
     then
         clear
+           rm -f container.sh
+           touch container.sh
+           echo -e "#!/bin/bash\n" >> container.sh
         
         read -p "${cyan}How much packages want to install?:${reset}" packagePiece
         counter=0
         while [ $counter -lt $packagePiece ]
         do
-            read -p "What does name of ackage ($counter)?:" packageName
+            read -p "What does name of package ($counter)?:" packageName
             echo "${magenta}SUCCESSFULL${reset}"
             echo $line
             packageName=$(echo $packageName | tr "[A-Z]" "[a-z]")
@@ -101,8 +104,6 @@ fi
 echo "${magenta}I saved your Git config information for Git installation!${reset}"
 sleep 2
 clear
-#READY FOR RUN :D
-
 
 echo "${yellow}I SET ALL CONFIG IN PROGRAM. PROGRAM RUNNING...${reset}"
 sleep 2
