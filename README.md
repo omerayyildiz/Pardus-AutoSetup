@@ -1,5 +1,5 @@
 # Pardus AutoSetup 
-## **Pardus Otomatik Kurulum Aracı**
+## **Pardus Otomatik Kurulum Aracı** / Pardus Auto Installation Tool
 ![Pardus Resim](sources/images/photo1.jpg)
 
 [![GitHub license](https://img.shields.io/github/license/omerayyildiz/Pardus-AutoSetup)](https://github.com/omerayyildiz/Pardus-AutoSetup/blob/master/LICENSE) 

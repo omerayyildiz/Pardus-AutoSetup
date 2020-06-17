@@ -9,7 +9,7 @@ reset=`tput sgr0`
 line="--------------------------------------"
 cd sources
 printf "${yellow}1.Türkçe\n2.English${reset}\n"
-read -p "Choose your language/ Dilini Seç:" langChoice
+read -p "Choose Your Language / Dilini Seç:" langChoice
  if [ $langChoice == 1 ]; then
  clear
    printf "${yellow}1.Gnome\n2.Xfce${reset}\n"
