@@ -27,6 +27,7 @@ read -p "Choose your language/ Dilini Seç:" langChoice
         sleep 3
         bash setupXFCE.sh
         clear
+      fi
  else
  clear
    printf "${yellow}1.Gnome\n2.Xfce${reset}\n"
@@ -44,4 +45,5 @@ read -p "Choose your language/ Dilini Seç:" langChoice
         sleep 3
         bash setupXfceEng.sh
         clear
+      fi
  fi
