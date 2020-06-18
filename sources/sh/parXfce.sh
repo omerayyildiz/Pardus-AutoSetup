@@ -18,7 +18,7 @@ echo "${blue}Arayüz Hazırlanıyor..."
 sleep 1
 echo "Kurulum Başlıyor... Lütfen Terminalden Ayrılmayınız!"
  #gui-settings config file loading to home directory
-  cd /media/pardus/TUX/Pardus-AutoSetup/sources/gui-settings
+  cd /media/pardus/TUX/Pardus-AutoSetup/gui-settings
   cat dconf-settings.ini | dconf load / #gui-settings (be like MacOS)
 sleep 1
 clear
@@ -168,7 +168,7 @@ then
     clear
     echo "EK KURULUMLAR ÇALIŞACAK..."
     echo $line
-    cd  /media/pardus/TUX/Pardus-AutoSetup/sources/sh/
+    cd  /media/pardus/TUX/Pardus-AutoSetup/sh/
     bash container.sh
 else
     echo "EK KURULUM BULUNAMADI!"
