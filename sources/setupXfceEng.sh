@@ -8,6 +8,7 @@ red=`tput setaf 1`
 cyan=`tput setaf 6`
 magenta=`tput setaf 5`
 reset=`tput sgr0`
+PROGLANG="ruby"
 line="--------------------------------------"
 
 # Change all directory path in project files.
@@ -29,7 +30,6 @@ then
     if [ $answer == 'y' ]
     then
         echo "OK! I set Ruby in your packages list!..."
-        PROGLANG="ruby"
         sleep 1
         clear
     else

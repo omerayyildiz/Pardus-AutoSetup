@@ -8,6 +8,7 @@ red=`tput setaf 1`
 cyan=`tput setaf 6`
 magenta=`tput setaf 5`
 reset=`tput sgr0`
+PROGLANG="ruby"
 line="--------------------------------------"
 
 # Change all directory path in project files.
@@ -28,7 +29,6 @@ then
     if [ $answer == 'e' ]
     then
         echo "Tamamdır! Kurulum Aynen Devam Ediyor..."
-        PROGLANG="ruby"
         sleep 1
         clear
     else
