@@ -17,7 +17,7 @@ clear
 echo "${blue}Upload Graphics Settings..."
 sleep 1
  #gui-settings config file loading to home directory
-  cd /media/pardus/TUX/Pardus-AutoSetup/gui-settings
+  cd /media/pardus/TUX/Pardus-AutoSetup/sources/gui-settings
   cat dconf-settings.ini | dconf load / #gui-settings (be like MacOS)
 sleep 1
 clear
@@ -167,7 +167,7 @@ then
     clear
     echo "Installing Other Packages..."
     echo $line
-    cd  /media/pardus/TUX/Pardus-AutoSetup/sh/
+    cd  /media/pardus/TUX/Pardus-AutoSetup/sources/sh/
     bash container.sh
 else
     echo "NOT FOUND PACKAGES!"

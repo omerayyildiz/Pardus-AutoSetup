@@ -11,6 +11,7 @@ reset=`tput sgr0`
 line="--------------------------------------"
 
 # Change all directory path in project files.
+cd sources
 sed -i "s|/media/pardus/TUX/Pardus-AutoSetup/|$(pwd)/|g" setupXfceEng.sh
 cd sh
 sed -i "s|/media/pardus/TUX/Pardus-AutoSetup/|$(cd .. && pwd)/|g" parGnomeEng.sh

@@ -16,7 +16,7 @@ clear
 
 echo "${blue}Arayüz Hazırlanıyor..."
 sleep 1
-echo Kurulum Başlıyor... Lütfen Terminalden Ayrılmayınız!
+echo "Kurulum Başlıyor... Lütfen Terminalden Ayrılmayınız!"
  #gui-settings config file loading to home directory
   cd /media/pardus/TUX/Pardus-AutoSetup/gui-settings
   cat dconf-settings.ini | dconf load / #gui-settings (be like MacOS)
