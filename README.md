@@ -7,32 +7,32 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/omerayyildiz/Pardus-AutoSetup)
 
 ## **Pardus AutoSetup Nedir?** / What is the Pardus AutoSetup?
-
+### Türkçe
 Live ya da normal kurulum sonrası açılan Pardus'a otomatik olarak belirlediğim uygulamaları indiren ve ayarlarımı yapan bir BASH Scripttir.
-
-It is a BASH Script that downloads the applications I set automatically to Pardus that opens after Live or normal installation and makes my settings.
+### English
+- It is a BASH Script that downloads the applications I set automatically to Pardus that opens after Live or normal installation and makes my settings.
 
 ## **Nasıl Çalışır?** / How does it works?
-
+### Türkçe
  Ana dizinde bulunan setup.sh dosyasını çalıştırın.
-
- Run the setup.sh file in the main directory.
+### English
+ - Run the setup.sh file in the main directory.
  
 ```bash
 bash setup.sh
 ```
 ## **Kullanmadan Önce Yapmanız Gerekenler** / What You Should Do Before Using
-
-- Ön kurulumda bulunan alanları doğru doldurmanız ve gerekli tüm paketlerin sayısını ve adlarını ilgili alanlara girmeniz yeterli olacaktır.
-
+### Türkçe
+Ön kurulumda bulunan alanları doğru doldurmanız ve gerekli tüm paketlerin sayısını ve adlarını ilgili alanlara girmeniz yeterli olacaktır.
+### English
 - It will be enough to fill the fields in the pre-installation correctly and enter the number and names of all required packages in the relevant fields.
 
 ## **Hata Anında Ne Yapmalıyım?** / What Should I Do Instantly?
- 
+### Türkçe
  Uygulama içi hata vermemek adına sürekli apt onarılıyor ve güncelleniyor. Fakat bazı iptal etme durumlarında apt arızalanabiliyor.
-
- Apt is constantly being repaired and updated to avoid in-app errors. However, in some cancellation cases, the apt may fail.
-
+### English
+ - Apt is constantly being repaired and updated to avoid in-app errors. However, in some cancellation cases, the apt may fail.
+### Türkçe
  Eğer,
  ```
 E: /var/lib/dpkg/lock kilidi alınamadı - open (11: Özkaynak geçici olarak kullanılamaz durumda)
@@ -40,12 +40,12 @@ E: /var/lib/dpkg/lock kilidi alınamadı - open (11: Özkaynak geçici olarak ku
 E: Yönetim dizini (/var/lib/dpkg/)kilitlenemiyor, başka bir işlem tarafından kullanılıyor olmasın?
 ```
 hatasını alırsanız repair klasöründe bulunan apt-lock-error-solve.sh dosyasını çalıştırın.
-
-If you get this kind of error, run the apt-lock-error-solve.sh file.
-
+### English
+- If you get this kind of error, run the apt-lock-error-solve.sh file.
+### Türkçe
 Bağımlılık hatası aldığınızda ise apt-repair.sh'ı çalıştırabilirsiniz.
-
-When you get apt error, you can run apt-repair.sh.
+### English
+- When you get apt error, you can run apt-repair.sh.
 
 ## **Örnek Kurulumlar** / Example Installation
 
