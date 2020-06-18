@@ -64,7 +64,7 @@ then
             if [ $counter -eq $packagePiece ]
             then
                 date=$(date)
-                addCompleted="#Date:$date\n$line"
+                addCompleted="#Date:$date\necho $line"
                 echo -e $addCompleted >> container.sh
             fi
         done
@@ -85,6 +85,8 @@ fi
 
 clear
 echo "${magenta}ONE STEP LEFT!${reset}"
+echo $line
+echo "IF YOU DON'T USE GIT, PRESS ENTER!"
 echo $line
 read -p "${cyan}Set your Git config username${reset} ${yellow}(user.name):${reset}" GITUSERNAME
 read -p "${cyan}Set your Git config e-mail${reset} ${yellow}(user.email):${reset}" GITEMAIL

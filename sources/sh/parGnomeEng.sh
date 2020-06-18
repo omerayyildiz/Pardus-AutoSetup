@@ -182,4 +182,5 @@ clear
 echo $line
 neofetch
    echo "STAY AT HOME :)"
+   sleep 10
 exit
