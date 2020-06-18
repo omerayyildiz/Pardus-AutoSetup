@@ -64,7 +64,7 @@ then
             if [ $counter -eq $packagePiece ]
             then
                 date=$(date)
-                addCompleted="#Date:$date\necho 'INSTALLATION SUCCESSFULL!'\nsleep 1\nclear\necho 'github.com/omerayyildiz'\nsleep 2\nclear\necho $line\necho 'You are the most precious :)'\necho $line"
+                addCompleted="#Date:$date\n$line"
                 echo -e $addCompleted >> container.sh
             fi
         done

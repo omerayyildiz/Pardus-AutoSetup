@@ -17,7 +17,6 @@ read -p "Choose Your Language / Dilini Seç:" langChoice
       
       if [ $distroType == 1 ]; then
         echo "Türkçe Gnome Kurulumu Başlatılıyor..."
-        clear
         sleep 3
         bash setupGnome.sh
         clear
