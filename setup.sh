@@ -8,8 +8,21 @@ magenta=`tput setaf 5`
 reset=`tput sgr0`
 line="--------------------------------------"
 cd sources
+#for gui-settings. Because the gnome settings can not set another distros from main distro.
+echo -e "1.Pardus\n2.Ubuntu\n"
+echo $line
+read -p "${yellow}Distronunuzu Seçin / Choose Your Distro:${reset}" gnomeSet
+   if [ $gnomeSet == 2 ]; then
+     cd gui-settings
+     rm -f dconf-settings.ini 
+     cd ubuntu-dconf 
+     cp *ini ../
+     cd ../../
+     clear
+   fi
+
 printf "${yellow}1.Türkçe\n2.English${reset}\n"
-read -p "Choose Your Language / Dilini Seç:" langChoice
+read -p "Choose Your Language / Dilinizi Seç:" langChoice
  if [ $langChoice == 1 ]; then
  clear
    printf "${yellow}1.Gnome\n2.Xfce${reset}\n"
