@@ -78,6 +78,7 @@ then
     fi
     
 else
+    echo $line
     printf "${cyan}Default Packages Name:${reset}\n$line\n${yellow}-Ruby\n-Gem\n-Spotify\n-Git\n-Visual Studio Code\n-Neofetch\n${reset}"
     sleep 3
     clear

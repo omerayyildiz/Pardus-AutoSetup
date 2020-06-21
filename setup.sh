@@ -9,7 +9,7 @@ reset=`tput sgr0`
 line="--------------------------------------"
 cd sources
 #for gui-settings. Because the gnome settings can not set another distros from main distro.
-echo -e "1.Pardus\n2.Ubuntu\n"
+echo -e "1.Pardus\n2.Ubuntu\"
 echo $line
 read -p "${yellow}Distronunuzu Seçin / Choose Your Distro:${reset}" gnomeSet
    if [ $gnomeSet == 2 ]; then
