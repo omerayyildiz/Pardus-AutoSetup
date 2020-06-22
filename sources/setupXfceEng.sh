@@ -64,7 +64,7 @@ then
             if [ $counter -eq $packagePiece ]
             then
                 date=$(date)
-                addCompleted="#Date:$date\necho $line"
+                addCompleted="#Date:$date\n#$line"
                 echo -e $addCompleted >> container.sh
             fi
         done
