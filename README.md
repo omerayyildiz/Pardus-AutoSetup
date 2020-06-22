@@ -12,7 +12,7 @@ Live ya da normal kurulum sonrası açılan Pardus'a otomatik olarak belirlediğ
 ### English
 - It is a BASH Script that downloads the applications I set automatically to Pardus that opens after Live or normal installation and makes my settings.
 
-# **Nasıl Çalışır?** / How does it works?
+# **Nasıl Çalışır?** / How Does It Works?
 ### Türkçe
  Ana dizinde bulunan setup.sh dosyasını çalıştırın.
 ### English
@@ -21,7 +21,7 @@ Live ya da normal kurulum sonrası açılan Pardus'a otomatik olarak belirlediğ
 ```bash
 bash setup.sh
 ```
-# **Kullanmadan Önce Yapmanız Gerekenler** / What You Should Do Before Using
+# **Kullanmadan Önce Yapmanız Gerekenler** / What You Should Do Before Using?
 ### Türkçe
 Ön kurulumda bulunan alanları doğru doldurmanız ve gerekli tüm paketlerin sayısını ve adlarını ilgili alanlara girmeniz yeterli olacaktır.
 ### English
