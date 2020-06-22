@@ -24,19 +24,19 @@ echo $line
 #Visual Studio Code and Discord deb file install
 echo "${blue}Installation Package Updating...${reset}"
 echo $line
-  echo e | sudo apt-get install curl
+  echo y | sudo apt-get install curl
   cd ~/Downloads
    curl -O https://dl.discordapp.net/apps/linux/0.0.10/discord-0.0.10.deb
 echo $line
    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
    sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
    sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-   echo e | sudo apt-get install apt-transport-https
+   echo y | sudo apt-get install apt-transport-https
 echo $line
 
- echo e | sudo apt-get update
- echo e | sudo apt-get upgrade
- echo e | sudo apt --fix-broken install #repair dpkg
+ echo y | sudo apt-get update
+ echo y | sudo apt-get upgrade
+ echo y | sudo apt --fix-broken install #repair dpkg
  echo $line
 sleep 1
 clear
@@ -45,11 +45,11 @@ redHeader=$(echo ${PROGLANG^}) #for uppercase
   echo "${red}Installing $redHeader...${reset}"
 echo $line
 sleep 1
-  echo e | sudo apt-get install $PROGLANG
+  echo y | sudo apt-get install $PROGLANG
     
     if [ $PROGLANG == "ruby" ]
     then
-      echo e | sudo apt-get install gem
+      echo y | sudo apt-get install gem
     fi
 
 echo $line
@@ -60,11 +60,11 @@ clear
   #Spotify deb package manuel install
 echo $line
 sleep 1
-   echo e | sudo apt --fix-broken install
+   echo y | sudo apt --fix-broken install
     curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
    echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-   echo e | sudo apt-get update
-   echo e | sudo apt-get install spotify-client
+   echo y | sudo apt-get update
+   echo y | sudo apt-get install spotify-client
 echo $line
 sleep 1
 clear
@@ -72,7 +72,7 @@ clear
    echo "${yellow}Installing Git...${reset}"
 echo $line
 sleep 1
-   echo e | sudo apt-get install git
+   echo y | sudo apt-get install git
 clear
 echo $line
 
@@ -87,8 +87,8 @@ clear
    echo "${cyan}Installing Visual Studio Code...${reset}"
 echo $line
 sleep 1
-   echo e | sudo apt --fix-broken install
-   echo e | sudo apt-get install code
+   echo y | sudo apt --fix-broken install
+   echo y | sudo apt-get install code
 echo $line
 sleep 1
 clear
@@ -97,10 +97,10 @@ clear
 echo $line
 sleep 1
    cd ~/Downloads
-   echo e | sudo apt-get update
-   echo e | sudo apt-get upgrade
+   echo y | sudo apt-get update
+   echo y | sudo apt-get upgrade
    sudo dpkg -i discord-0.0.10.deb
-   echo e | sudo apt --fix-broken install
+   echo y | sudo apt --fix-broken install
 echo $line
 sleep 1
 clear
@@ -108,14 +108,14 @@ clear
    echo "Installing Neofetch..."
 echo $line
 sleep 1
-   echo e | sudo apt-get install neofetch
+   echo y | sudo apt-get install neofetch
 echo $line
 sleep 1
 clear
 
    echo "${blue}Installing Telegram...${reset}"
 echo $line
-   echo e | sudo apt-get install telegram-desktop
+   echo y | sudo apt-get install telegram-desktop
 echo $line
 sleep 1
 clear
@@ -123,8 +123,8 @@ clear
    echo "${red}Deleting Cache..."
 echo $line
 sleep 1
-   echo e | sudo apt-get autoremove
-   echo e | sudo apt-get clean
+   echo y | sudo apt-get autoremove
+   echo y | sudo apt-get clean
 clear
 echo $line
 sleep 1

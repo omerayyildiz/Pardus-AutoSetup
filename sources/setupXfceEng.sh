@@ -57,7 +57,7 @@ then
             echo "${magenta}SUCCESSFULL${reset}"
             echo $line
             packageName=$(echo $packageName | tr "[A-Z]" "[a-z]")
-            packageCode="\necho 'Installing $packageName...'\necho $line\nsleep 1\necho e | sudo apt-get install $packageName\necho $line\nsleep 1\nclear\n#end of package template code dude \n"
+            packageCode="\necho 'Installing $packageName...'\necho $line\nsleep 1\necho y | sudo apt-get install $packageName\necho $line\nsleep 1\nclear\n#end of package template code dude \n"
             echo -e $packageCode >> container.sh #container.sh isolated from main script because I couldn't find "push text directly to file" algorithn :D
             counter=$((counter+1))
             
