@@ -22,6 +22,7 @@ read -p "${yellow}Distronunuzu Seçin / Choose Your Distro:${reset}" gnomeSet
      clear
    fi
 
+clear
 printf "${yellow}1.Türkçe\n2.English${reset}\n"
 read -p "Choose Your Language / Dilinizi Seç:" langChoice
  if [ $langChoice == 1 ]; then
