@@ -17,12 +17,6 @@ clear
 echo "${blue}Arayüz Hazırlanıyor..."
 sleep 1
 echo "Kurulum Başlıyor... Lütfen Terminalden Ayrılmayınız!"
- #gui-settings config file loading to home directory
-  cd /media/pardus/TUX/Pardus-AutoSetup/gui-settings
-  cat dconf-settings.ini | dconf load / #gui-settings (be like MacOS)
-sleep 1
-clear
-
 echo "${reset}Kurulum Başladı!"
 sleep 1
 clear
@@ -33,7 +27,7 @@ echo "${blue}Kurulum Paketleri Güncelleniyor...${reset}"
 echo $line
   echo e | sudo apt-get install curl
   cd ~/İndirilenler
-   curl -O https://dl.discordapp.net/apps/linux/0.0.9/discord-0.0.9.deb
+   curl -O https://dl.discordapp.net/apps/linux/0.0.10/discord-0.0.10.deb
 echo $line
    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
    sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
@@ -106,7 +100,7 @@ sleep 1
    cd ~/İndirilenler
    echo e | sudo apt-get update
    echo e | sudo apt-get upgrade
-   sudo dpkg -i discord-0.0.9.deb
+   sudo dpkg -i discord-0.0.10.deb
    echo e | sudo apt --fix-broken install
 echo $line
 sleep 1

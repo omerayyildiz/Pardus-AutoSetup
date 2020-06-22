@@ -44,6 +44,9 @@ then
     if [ $packageAnswer == 'e' ]
     then
         clear
+           rm -f container.sh
+           touch container.sh
+           echo -e "#!/bin/bash\n" >> container.sh
         
         read -p "${cyan}Kaç Paket Kuracaksınız?:${reset}" packagePiece
         counter=0

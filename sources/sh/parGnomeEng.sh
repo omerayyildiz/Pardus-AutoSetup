@@ -32,7 +32,7 @@ echo "${blue}Installation Package Updating...${reset}"
 echo $line
   echo e | sudo apt-get install curl
   cd ~/Downloads
-   curl -O https://dl.discordapp.net/apps/linux/0.0.9/discord-0.0.9.deb
+   curl -O https://dl.discordapp.net/apps/linux/0.0.10/discord-0.0.10.deb
 echo $line
    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
    sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
@@ -105,7 +105,7 @@ sleep 1
    cd ~/Downloads
    echo e | sudo apt-get update
    echo e | sudo apt-get upgrade
-   sudo dpkg -i discord-0.0.9.deb
+   sudo dpkg -i discord-0.0.10.deb
    echo e | sudo apt --fix-broken install
 echo $line
 sleep 1
