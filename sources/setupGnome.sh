@@ -57,7 +57,7 @@ then
             echo $line
             packageName=$(echo $packageName | tr "[A-Z]" "[a-z]")
             packageCode="\necho '$packageName Kurulacak...'\necho $line\nsleep 1\necho e | sudo apt-get install $packageName\necho $line\nsleep 1\nclear\n#end of package template code dude \n"
-            echo -e $packageCode >> container.sh #container.sh isolated from main script because I couldn't find "push text directly to file" algorithn :D
+            echo -e $packageCode >> container.sh #container.sh isolated from main script because I couldn't find "push text directly to file" algorithm :D
             counter=$((counter+1))
             
             if [ $counter -eq $packagePiece ]
