@@ -47,6 +47,7 @@ Bağımlılık hatası aldığınızda ise apt-repair.sh'ı çalıştırabilirsi
 
 
 # **Örnek Kurulumlar** / Example Installation
+[version 4.0](https://www.youtube.com/watch?v=9rxzUQqwMnA) 
 
 [version 3.0](https://www.youtube.com/watch?v=4H4pc_ZkUGM)
 
