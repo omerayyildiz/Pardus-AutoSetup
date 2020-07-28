@@ -6,6 +6,11 @@
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/omerayyildiz/Pardus-AutoSetup)
 ![GitHub repo size](https://img.shields.io/github/repo-size/omerayyildiz/Pardus-AutoSetup)
 
+# **Dikkat! / Attention!**
+Bu repoda hiçbir git kuralına uyulmayarak geliştirme yapılmıştır. Commitlerdeki hatalar almış başını gidiyor, versiyonlama ise tamamen bir facia.  
+
+> This repo has not been developed in accordance with any git rules. The versioning is faulty in itself. I'm sorry.
+
 # **Pardus AutoSetup Nedir?** / What is the Pardus AutoSetup?
 ### Türkçe
 Live ya da normal kurulum sonrası açılan Pardus'a otomatik olarak belirlediğim uygulamaları indiren ve ayarlarımı yapan bir BASH Scripttir.
